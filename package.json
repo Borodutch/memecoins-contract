@@ -1,10 +1,10 @@
 {
-  "name": "@borodutch/smart-contract-starter",
-  "version": "0.0.1",
-  "description": "A starter for Solidity smart contracts for Ethereum",
+  "name": "@borodutch/memecoins-contract",
+  "version": "1.0.0",
+  "description": "Contract for $MEMECOINS",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Borodutch/smart-contract-starter"
+    "url": "git+https://github.com/Borodutch/memecoins-contract"
   },
   "license": "MIT",
   "np": {
@@ -26,7 +26,7 @@
     "eth-lint": "yarn solhint 'contracts/**/*.sol'",
     "lint": "prettier --check . && eslint --max-warnings 0 --ext ts scripts test && yarn eth-lint",
     "release": "np",
-    "prepublishOnly": "yarn build && yarn tsc"
+    "prepublishOnly": "yarn build && yarn tsc --skipLibCheck"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-chai-matchers": "^2.0.2",
@@ -35,6 +35,8 @@
     "@nomicfoundation/hardhat-toolbox": "^4.0.0",
     "@nomicfoundation/hardhat-verify": "^2.0.2",
     "@openzeppelin/contracts": "^5.0.1",
+    "@openzeppelin/contracts-upgradeable": "^5.0.1",
+    "@openzeppelin/hardhat-upgrades": "^3.0.0",
     "@typechain/ethers-v6": "^0.5.1",
     "@typechain/hardhat": "^9.1.0",
     "@types/chai": "^4.3.11",

@@ -1,0 +1,134 @@
+{
+  "manifestVersion": "3.2",
+  "proxies": [
+    {
+      "address": "0xA4158473B8b1F99332884a950aE513aa5c9b143C",
+      "txHash": "0xfa602470f0da05a9fb53a87c539506f534e10586e1ec4eeaf43b6c67dedd827e",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x077016fD48780831E645797a332E9D087bEEFb89",
+      "txHash": "0x073f8d45f2d91b3c91a45de232c19a397a0099eb1bc72e2be7c2d32b98639993",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x9e4C8cd9d79D4589F3F51c7006cB0e1400b9af65",
+      "txHash": "0x8a3829f42c5bf6319605bc1b7e7bfed80e3c7bd3b551ff94e384fac3b76fbdd2",
+      "kind": "transparent"
+    }
+  ],
+  "impls": {
+    "7baa226ab2058d867b6fc0402abcb7a3c80916dc0e12085d8d5a2d96a48978e4": {
+      "address": "0x5274e29da8b58857508C1A4FCDe029085512c9ed",
+      "txHash": "0x48754b6a917516895ecc51f98c431abe2f6659bed7701befb8a08667ee70d6b2",
+      "layout": {
+        "solcVersion": "0.8.23",
+        "storage": [],
+        "types": {
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_struct(InitializableStorage)182_storage": {
+            "label": "struct Initializable.InitializableStorage",
+            "members": [
+              {
+                "label": "_initialized",
+                "type": "t_uint64",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_initializing",
+                "type": "t_bool",
+                "offset": 8,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:69",
+              "offset": 0,
+              "slot": "0"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:73",
+              "offset": 8,
+              "slot": "0"
+            }
+          ]
+        }
+      }
+    },
+    "726e3d6231439426464596db01c52c0dcaffe44224146f3f5238d5257962a6c4": {
+      "address": "0xe37cD230a8cc9A388801209c64C2C360643dbc12",
+      "txHash": "0xe765852aed0b4fee557b20d68bcedf6db70d1b58e666ff08f200744e44e73de3",
+      "layout": {
+        "solcVersion": "0.8.23",
+        "storage": [],
+        "types": {
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_struct(InitializableStorage)182_storage": {
+            "label": "struct Initializable.InitializableStorage",
+            "members": [
+              {
+                "label": "_initialized",
+                "type": "t_uint64",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_initializing",
+                "type": "t_bool",
+                "offset": 8,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:69",
+              "offset": 0,
+              "slot": "0"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:73",
+              "offset": 8,
+              "slot": "0"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

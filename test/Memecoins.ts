@@ -32,7 +32,8 @@ describe('Memecoins contract tests', function () {
         symbol,
         premintAmount,
         mintRate,
-        supplyCap
+        supplyCap,
+        { value: ethers.parseEther('0.01') }
       )
       await tx.wait()
     })

@@ -78,6 +78,10 @@ contract Memecoin is
     _unpause();
   }
 
+  function withdraw() public onlyOwner {
+    payable(owner()).transfer(address(this).balance);
+  }
+
   function mint() public payable {
     require(msg.value > 0, "No Ether sent");
     uint256 fee = (msg.value * 25) / 1000;

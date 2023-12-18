@@ -25,18 +25,24 @@ function printDeploymentTransaction(
 async function main() {
   // Get network
   const provider = ethers.provider
-  const { name: chainName } = await provider.getNetwork()
-  console.log('Deploying to chain:', chainName)
+  const { chainId } = await provider.getNetwork()
+  console.log('Deploying to chain:', chainId)
   // Get signer
   const [deployer] = await ethers.getSigners()
   await printSignerInfo(deployer)
+  console.log(ethers.parseEther('510308738700263307'))
   // Deploy contract
   const contractName = 'Memecoins'
   console.log(`Deploying ${contractName}...`)
   const Contract = await ethers.getContractFactory(contractName)
-  const contract = await upgrades.deployProxy(Contract, [], {
-    kind: 'transparent',
-  })
+  const fee = chainId === 137n ? '20' : '0.1'
+  const contract = await upgrades.deployProxy(
+    Contract,
+    [ethers.parseEther(fee)],
+    {
+      kind: 'transparent',
+    }
+  )
   const deploymentTransaction = contract.deploymentTransaction()
   if (!deploymentTransaction) {
     throw new Error('Deployment transaction is null')

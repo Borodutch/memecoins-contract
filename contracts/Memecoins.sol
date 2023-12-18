@@ -14,10 +14,13 @@ contract Memecoins is Initializable {
   // Events
   event MemecoinCreated(address indexed memecoin, address indexed owner);
 
+  uint256 public feeAmount;
   address public constant FEE_RECIPIENT =
     0xbf74483DB914192bb0a9577f3d8Fb29a6d4c08eE;
 
-  function initialize() public initializer {}
+  function initialize(uint256 _feeAmount) public initializer {
+    feeAmount = _feeAmount;
+  }
 
   function createMemecoin(
     address initialOwner,
@@ -27,7 +30,7 @@ contract Memecoins is Initializable {
     uint256 initialMintPrice,
     uint256 initialSupplyCap
   ) public payable returns (Memecoin) {
-    require(msg.value >= 0.01 ether, "Insufficient funds");
+    require(msg.value >= feeAmount, "Insufficient funds");
     payable(FEE_RECIPIENT).transfer(msg.value);
 
     Memecoin memecoin = new Memecoin();

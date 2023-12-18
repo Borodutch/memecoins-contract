@@ -5,6 +5,16 @@
       "address": "0x6cB9AfadD4aB800595114fF73B4705221d72D49F",
       "txHash": "0x509270d4f420fa7089f983dddc46fff18bc6fc398987331209ab179f7943b060",
       "kind": "transparent"
+    },
+    {
+      "address": "0x6C9a5618E7277E27415575946794848aA2358236",
+      "txHash": "0x9f6bf534f4bfb60253c1a9dfc51e6e7fae99dbe6480572225097bde4215b5afc",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x469274D4B689D8D6dDa55AF6c1736902FCd5125B",
+      "txHash": "0xa5e7328e5d406e8262c04531762297157d5018d305282cfc4bd54c1c72bdc8e0",
+      "kind": "transparent"
     }
   ],
   "impls": {
@@ -40,6 +50,75 @@
           "t_uint64": {
             "label": "uint64",
             "numberOfBytes": "8"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:69",
+              "offset": 0,
+              "slot": "0"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:73",
+              "offset": 8,
+              "slot": "0"
+            }
+          ]
+        }
+      }
+    },
+    "c54e15f107839b72679e82e96c8b279d2084052866b929a50f8e3fc53a291fb4": {
+      "address": "0x13f7AD0B97ec0E861DF2FDa70489Ea26F74cBEa7",
+      "txHash": "0xd12a64a777bc7ede34de2bde918b8625b7a20140f2b51ad56b5a28fb27eb3c87",
+      "layout": {
+        "solcVersion": "0.8.23",
+        "storage": [
+          {
+            "label": "feeAmount",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint256",
+            "contract": "Memecoins",
+            "src": "contracts/Memecoins.sol:17"
+          }
+        ],
+        "types": {
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_struct(InitializableStorage)182_storage": {
+            "label": "struct Initializable.InitializableStorage",
+            "members": [
+              {
+                "label": "_initialized",
+                "type": "t_uint64",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_initializing",
+                "type": "t_bool",
+                "offset": 8,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
           }
         },
         "namespaces": {

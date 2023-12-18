@@ -30,12 +30,11 @@ async function main() {
   // Get signer
   const [deployer] = await ethers.getSigners()
   await printSignerInfo(deployer)
-  console.log(ethers.parseEther('510308738700263307'))
   // Deploy contract
   const contractName = 'Memecoins'
   console.log(`Deploying ${contractName}...`)
   const Contract = await ethers.getContractFactory(contractName)
-  const fee = chainId === 137n ? '20' : '0.1'
+  const fee = chainId === 137n ? '20' : '0.01'
   const contract = await upgrades.deployProxy(
     Contract,
     [ethers.parseEther(fee)],

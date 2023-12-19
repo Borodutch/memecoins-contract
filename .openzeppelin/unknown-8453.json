@@ -15,6 +15,11 @@
       "address": "0xcEfEA0975000ab28351D0272B4E9d267136e6ec6",
       "txHash": "0x1a5708663603631325caa311e98b02763cbc85deee1a7cb2aa180bb4db60adda",
       "kind": "transparent"
+    },
+    {
+      "address": "0x09FD44cBA66D58b03eb60F3167A205D271E74B5D",
+      "txHash": "0x1b59933e96974c3b68cc4b2ca689369abf2a1776fce4b9897bd7c091c944f934",
+      "kind": "transparent"
     }
   ],
   "impls": {
@@ -77,6 +82,75 @@
     "c54e15f107839b72679e82e96c8b279d2084052866b929a50f8e3fc53a291fb4": {
       "address": "0xdF9C9e6f8aCC0C9588E07d7586534b3DB671299A",
       "txHash": "0x918412b1ddf0a846137198f3dd8a6e0c2a54115ee3c3484994b679fb19787478",
+      "layout": {
+        "solcVersion": "0.8.23",
+        "storage": [
+          {
+            "label": "feeAmount",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint256",
+            "contract": "Memecoins",
+            "src": "contracts/Memecoins.sol:17"
+          }
+        ],
+        "types": {
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_struct(InitializableStorage)182_storage": {
+            "label": "struct Initializable.InitializableStorage",
+            "members": [
+              {
+                "label": "_initialized",
+                "type": "t_uint64",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_initializing",
+                "type": "t_bool",
+                "offset": 8,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:69",
+              "offset": 0,
+              "slot": "0"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:73",
+              "offset": 8,
+              "slot": "0"
+            }
+          ]
+        }
+      }
+    },
+    "dea0becfe89a2a08d70dfdf7d0cae342c606ec268cef2229b5416ba6e8c43892": {
+      "address": "0xA0E9cE2423D8ee32384d155549E58F4AA0a45D75",
+      "txHash": "0x6fb4374a4bc6f9c35c1df5a16233e91093e644aaef5559ab03eb8be804b44a33",
       "layout": {
         "solcVersion": "0.8.23",
         "storage": [

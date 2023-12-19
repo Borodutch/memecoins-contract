@@ -86,8 +86,7 @@ contract Memecoin is
     require(msg.value > 0, "No Ether sent");
     uint256 fee = (msg.value * 25) / 1000;
     payable(FEE_RECIPIENT).transfer(fee);
-    uint256 remainingValue = msg.value - fee;
-    uint256 amountToMint = remainingValue * mintRate;
+    uint256 amountToMint = msg.value * mintRate;
     require(amountToMint > 0, "Insufficient Ether for minting");
     require(
       supplyCap == 0 || totalSupply() + amountToMint <= supplyCap,

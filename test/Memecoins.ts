@@ -6,7 +6,9 @@ describe('Memecoins contract tests', function () {
   before(async function () {
     ;[owner] = await ethers.getSigners()
     Memecoins = await ethers.getContractFactory('Memecoins')
-    memecoins = await upgrades.deployProxy(Memecoins, [])
+    memecoins = await upgrades.deployProxy(Memecoins, [
+      ethers.parseEther('0.01'),
+    ])
   })
 
   describe('createMemecoin', function () {
